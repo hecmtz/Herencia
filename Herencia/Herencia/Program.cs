@@ -8,15 +8,6 @@ namespace Herencia
 {
     class Program
     {
-        
-        List<SeleccionPais> list1 = new List<SeleccionPais>()
-            {
-                t1,a1,c1
-};
-        //public ListaJugadores(string pais)
-        //{
-        //    List<SeleccionFutbol> SeleccionPais;
-
         //    Futbolista f1 = new Futbolista();
         //    f1.SetNombre("Pablito ");
         //    f1.SetApellidos(" Lopez");
@@ -25,6 +16,12 @@ namespace Herencia
         //    f1.SetEdad(20);
         //    f1.SetId(350215);
         //    f1.SetViajando(true);
+
+        
+        //public ListaJugadores(string pais)
+        //{ 
+        //    List<SeleccionFutbol> SeleccionPais;
+
 
         //    Futbolista f2 = new Futbolista();
         //    f2.SetNombre("Lionel");
@@ -85,7 +82,8 @@ namespace Herencia
         static void Main(string[] args)
         {
 
-            List<SeleccionFutbol> SeleccionPais;
+
+            List<SeleccionFutbol> selectionTeam;
 
             Futbolista f1 = new Futbolista();
             f1.SetNombre("Pablito ");
@@ -148,7 +146,8 @@ namespace Herencia
             m2.SetId(4562);
             m2.SetViajando(false);
 
-            SeleccionPais = new List<SeleccionFutbol> {
+
+           selectionTeam = new List<SeleccionFutbol> {
                 f1,f2,f3,m1,m2,e1,e2
             };
 
@@ -177,6 +176,10 @@ namespace Herencia
             }
             Console.WriteLine();
             Console.WriteLine("el contador es " + m2.GetContador());
+
+            SeleccionPais g2 = new SeleccionPais("Italia",selectionTeam);
+
+            g2.MeterJugador(f1);
             Console.ReadLine();
         }
     }
